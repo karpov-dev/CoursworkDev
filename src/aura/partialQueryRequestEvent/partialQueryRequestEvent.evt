@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="queryType" type="String" required="true"/>
+    <aura:attribute name="queryFieldName" type="String" required="true"/>
+    <aura:attribute name="fieldValue" type="String" required="true"/>
+</aura:event>

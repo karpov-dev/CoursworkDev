@@ -1,0 +1,20 @@
+<aura:component>
+
+    <aura:attribute name="roomId" type="String" required="true"/>
+    <aura:attribute name="pricebookEntryId" type="PricebookEntry" required="true"/>
+    
+    <aura:attribute name="title" type="String" default="Booking"/>
+    <aura:attribute name="variant" type="String" default="button"/>
+    <aura:attribute name="modalIsOpen" type="Boolean"/>
+
+    <aura:if isTrue="{!v.variant == 'button'}">
+        <lightning:button variant="neutral" label="{!v.title}" onclick="{! c.createBookingCard }"/>
+    </aura:if>
+
+    <aura:if isTrue="{!v.variant == 'icon'}">
+        <lightning:buttonIcon iconName="utility:add" variant="border-filled" onclick="{! c.createBookingCard }" />
+    </aura:if>
+
+    <c:CreateBookingCardModal isOpen="{!v.modalIsOpen}" roomId="{!v.roomId}" pricebookEntryId="{!v.pricebookEntryId}"/>
+
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component>
+    <div class="slds-grid slds-einstein-header slds-card__header">
+        <lightning:buttonGroup>
+            <c:ChangeCurrency/>
+            <c:CreateCase variant="icon"/>
+        </lightning:buttonGroup>
+    </div>
+</aura:component>

@@ -1,0 +1,13 @@
+.THIS img {
+    width: 20%;
+    border-radius: 10px;
+    float: left;
+}
+
+.THIS p{
+    font-size: medium;
+}
+
+.THIS {
+    max-height: 350px;
+}

@@ -1,0 +1,12 @@
+<aura:component>
+
+    <aura:attribute name="searchDisabled" type="Boolean" default="true"/>
+
+    <lightning:card title="Booking Hotel">
+        <lightning:input aura:id="location" label="Куда вы хотите поехать?" onchange="{!c.isFullInformation}" required="true"/>
+        <lightning:input type="date" aura:id="startBookingDate" label="Заезд" onchange="{!c.isFullInformation}" required="true"/>
+        <lightning:input type="date" aura:id="endBookingDate" label="Отъезд" onchange="{!c.isFullInformation}" required="true"/>
+        <lightning:button name="searchHotels" label="Найти отели" disabled="{!v.searchIsEnabled}" onclick="{!c.findHotels}"/>
+    </lightning:card>
+
+</aura:component>
